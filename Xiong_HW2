@@ -1,0 +1,68 @@
+#HW2 for Course MATH 510
+#Instructor:Professor G
+
+#Problem 1: Prints out the Fibonacci numbers
+def fib(n):
+"""
+  This is a function that prints out all the Fibonacci numbers less than a taken value n
+
+  Parameters:
+  n - any non-negative real number
+"""
+    a=0                   #assigns the first two Fibonacci numbers to variables a,b
+    b=1                   #set a=0,b=1
+    while a<n:            #set the condition for the loop to run on, that is a<n
+       print(a)           #each time store the next Fibonacci number in variable a and ptints out
+       a=b
+       b=a+b
+    return a
+
+
+#Problem 2:Provide the larger one of two numbers
+def mymax(m,n):
+"""
+  This is a function that compares two numbers input by outsiders and then returns the larger one;
+  
+  Parameters:
+  m - any comparable number,integer,float,and so on
+  n - any comparable number,integer,float,and so on
+"""
+    if m<n:              #uses if-then-else to consider on 3 senarios,>,==,<
+       return n          #on each judgement,return the larger one
+    elif m==n:                         #when they are the same, instead of returning a number
+       return('they are the same')     #gives out a word to indicate they are the same
+    else:
+       return m
+       
+       
+#Problem 3:Provide the largest one of three numbers
+def max_of_three(n1,n2,n3):
+"""
+  This is a function that compares three numbers input by outsiders and then returns the larger one
+  
+  Parameters:
+  n1 - any comparable number,integer,float,and so on
+  n2 - any comparable number,integer,float,and so on
+  n3 - any comparable number,integer,float,and so on
+"""
+    if (n1>n2) and (n1>n3):            #compare n1, n2 and n3, if n1 is larger than the rest two, output n1
+        max=n1
+    elif (n2>n1) and (n2>n3):          #compare n1, n2 and n3, if n2 is larger than the rest two, output n2
+        max=n2
+    else:                              #the first two senarios are both false and then n3 is the largest and output
+        max=n3
+    return max
+    
+  
+#Problem 4:Computes the length of a given list or string.
+def mylen(x):
+"""
+ This is a function that counts the characters in a given list or string and then return the number
+ 
+ Parameters:
+ x - any list of numbers or strings,e.g [1,2,3,4,5],['a','b','c',d'],'abcde','12345'
+"""
+    num=0               #stores the counting number in variable num and assigns an initial value of 0 to num
+    for item in x:      #iterates the items in given x
+     num=num+1          #on each iteration the counting number will increase by 1
+    return num          #when loop ends the value stored in num is the number of characters,that is lenth of input list or string

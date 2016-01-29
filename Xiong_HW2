@@ -2,13 +2,13 @@
 #Instructor:Professor G
 
 #Problem 1: Prints out the Fibonacci numbers
-def fib(n):
 """
   This is a function that prints out all the Fibonacci numbers less than a taken value n
 
   Parameters:
   n - any non-negative real number
 """
+def fib(n):
     a=0                   #assigns the first two Fibonacci numbers to variables a,b
     b=1                   #set a=0,b=1
     while a<n:            #set the condition for the loop to run on, that is a<n
@@ -19,7 +19,6 @@ def fib(n):
 
 
 #Problem 2:Provide the larger one of two numbers
-def mymax(m,n):
 """
   This is a function that compares two numbers input by outsiders and then returns the larger one;
   
@@ -27,6 +26,7 @@ def mymax(m,n):
   m - any comparable number,integer,float,and so on
   n - any comparable number,integer,float,and so on
 """
+def mymax(m,n):
     if m<n:              #uses if-then-else to consider on 3 senarios,>,==,<
        return n          #on each judgement,return the larger one
     elif m==n:                         #when they are the same, instead of returning a number
@@ -36,7 +36,6 @@ def mymax(m,n):
        
        
 #Problem 3:Provide the largest one of three numbers
-def max_of_three(n1,n2,n3):
 """
   This is a function that compares three numbers input by outsiders and then returns the larger one
   
@@ -45,6 +44,7 @@ def max_of_three(n1,n2,n3):
   n2 - any comparable number,integer,float,and so on
   n3 - any comparable number,integer,float,and so on
 """
+def max_of_three(n1,n2,n3):
     if (n1>n2) and (n1>n3):            #compare n1, n2 and n3, if n1 is larger than the rest two, output n1
         max=n1
     elif (n2>n1) and (n2>n3):          #compare n1, n2 and n3, if n2 is larger than the rest two, output n2
@@ -55,13 +55,13 @@ def max_of_three(n1,n2,n3):
     
   
 #Problem 4:Computes the length of a given list or string.
-def mylen(x):
 """
  This is a function that counts the characters in a given list or string and then return the number
  
  Parameters:
  x - any list of numbers or strings,e.g [1,2,3,4,5],['a','b','c',d'],'abcde','12345'
 """
+def mylen(x):
     num=0               #stores the counting number in variable num and assigns an initial value of 0 to num
     for item in x:      #iterates the items in given x
      num=num+1          #on each iteration the counting number will increase by 1
@@ -69,13 +69,13 @@ def mylen(x):
 
 
 #Problem 5:Judges letter as vowel or not
-def char(m):
 """
  This function decides whether a given letter is vowel or not
  
  Parameters:
  m - any letter in lower or capital case
 """
+def char(m):
     vowel=False                                          #create a flag with default value False
     list=['a','e','i','o','u','A','E','I','O','U']       #create a list that consists of all vowels in both lower and capital cases  
     if m in list:                                        #check if the given letter m is in the vowel list
@@ -84,13 +84,13 @@ def char(m):
     
     
 #Problem 6:Translate a text into "rövarspråket"
-def translation(s):
 """
  This function doubles every consonant in a text and place an occurrence of "o" in between
  
  Parameter:
  s - any string consisting of letters,best all in lower cases
-""'
+"""
+def translation(s):
     new=list(s)                                          #change the given string into a list and store it in a variable new
     consonant=['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z']
                                                          #create a list that consists all the consonants in lower cases(but the list 
@@ -103,25 +103,28 @@ def translation(s):
     
 
 #Problem 7:Sum and multiply all numbers in a list
-def sum(n):
+
 """
  This function sums up all the numbers in a list
  
  Parameter
  n - any list consisting of numbers
 """
+def sum(n):
     sum=0                                                #create a variable sum to store the summation result with initial value 0 
     for x in n:                                          #get each number's value in the given list
       sum=sum+x                                          #update sum by adding the current number
     return sum                                           #return the final summation result
 
-def multiply(m):
+
 """
  This function multiplies all the numbers in a given list
  
  Parameter
  m - any list consisting of numbers
 """
+def multiply(m):
+
     mul=1                                                #create a variable mul to store the production with initial value 1
     for y in m:                                          #get each number's value in the given list
        mul=mul*y                                         #update mul by multiplying the current number
@@ -129,26 +132,26 @@ def multiply(m):
     
     
 #Problem 8:Get the reversal of a string
-def reverse(s):
 """
  This function is to return the reversal of a given string
  
  Parameter:
  s - any kind of string
 """
+def reverse(s):
     new=s[::-1]                                          #generate a string new that copies the given string from the ending to the 
                                                          #beginning,setting step=-1
     return new                                           #return the reversal
     
 
 #Problem 9:Recognize palindromes
-def is_palindrome(w):
 """
  This function recognizes a string,i.e, a word that looks the same if written backwards
  
  Parameter:
  w - any kind of string
 """
+def is_palindrome(w):
     r=w[::-1]                                            #generate a string r that is the reversal of the given one
     if r==w:                                             #if the reversal and the original are the same,return True
        return True
@@ -157,7 +160,6 @@ def is_palindrome(w):
 
 
 #Problem 10:Recognize membership
-def is_member(x,a):
 """
  This function decides whether a value x is in the list of values a and returns True if x is a member of a, False otherwise.
  
@@ -165,6 +167,7 @@ def is_member(x,a):
  x - a input number,string,etc
  a - a input list of numbers,strings,etc
 """
+def is_member(x,a):
     flag=False                                          #create a flag with default False
     if x in a:                                          #check whether x is in the list a or not
      flag=True                                          #if it is, set the variable flag to True
@@ -173,7 +176,6 @@ def is_member(x,a):
     
     
 #Problem 11:Check overlapping of two lists
-def overlapping(m,n):
 """
  This function checks whether the two input lists have at least one element in common. If yes,return True,False otherwise.
  
@@ -181,6 +183,7 @@ def overlapping(m,n):
  m - any list consists of numbers,strings,etc
  n - any list consists of numbers,strings,etc
 """
+def overlapping(m,n):
     flag=False                                           #create a flag with default False
     for c in m:                                          #get each element in m
         if c in n:                                       #check the element in m is in the other list n or not
@@ -190,7 +193,6 @@ def overlapping(m,n):
     
     
 #Problem 12:Generate n characters
-def generate_n_chars(n,c):
 """
  This function generates a string consisting of the same chars with the number of length n and char c set by input
  
@@ -198,6 +200,7 @@ def generate_n_chars(n,c):
  n - any positive integer
  c - any kind of character
 """
+def generate_n_chars(n,c):
     str=c                                               #generate a variable str with the initial value of c taken by function                                           
     i=1                                                 #create a counter with initial value of 1
     while i<n:                                          #as long as i is less than n,add character c to str and then i increases by 1

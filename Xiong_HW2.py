@@ -1,6 +1,8 @@
 #HW2 for Course MATH 510
 #Instructor:Professor G
 
+## Excellent documentation.
+
 #Problem 1: Prints out the Fibonacci numbers
 def fib(n):
     """
@@ -69,7 +71,7 @@ def mylen(x):
 
 
 #Problem 5:Judges letter as vowel or not
-def char(m):
+def vowel(m):
     """
      This function decides whether a given letter is vowel or not
  
@@ -84,7 +86,9 @@ def char(m):
     
     
 #Problem 6:Translate a text into "rövarspråket"
-def translation(s):
+
+## Nice implementation!
+def translate(s):
     """
     This function doubles every consonant in a text and place an occurrence of "o" in between
  
@@ -176,6 +180,7 @@ def is_member(x,a):
     
     
 #Problem 11:Check overlapping of two lists
+## This logic does not work properly
 def overlapping(m,n):
     """
      This function checks whether the two input lists have at least one element in common. If yes,return True,False otherwise.
@@ -209,4 +214,63 @@ def generate_n_chars(n,c):
                                                         #in the current str
     return str                                          #once i==n,loop ends and return updated str
     
-        
+##TEST CASES
+
+print('#1\n')
+fib(500)
+print('\n')
+
+print('#2\n')
+print(mymax(45,987), '\n')
+
+print('#3\n')
+print(max_of_three(3,4,5),'\n')
+
+print('#4\n')
+print(mylen('Gerhard'))
+print(mylen([1,2,3,4,5,6,7]))
+print('\n')
+
+print('#5\n')
+print(vowel('e'))
+print(vowel('H'))
+print('\n')
+
+print('#6\n')
+print(translate("this is fun"))
+print(translate('aeiou'))
+print(translate('YYYYYYY'))
+print(translate("mmmmmm"))
+print('\n')
+
+print('#7\n')
+print(sum([1,2,3,4,5]))
+print('\n')
+
+print('#8\n')
+print(multiply([0,1,2,3]))
+print(multiply([1,2,3,4]))
+print('\n')
+
+print('#9\n')
+print(reverse("gnitset ma I"))
+print('\n')
+
+print('#10\n')
+print(is_palindrome('radar'))
+print(is_palindrome('Gerhard'))
+print('\n')
+
+print('#11\n')
+print(is_member('dog', ['cat', 'dog', 'zebra']))
+print(is_member(3, [1,2,3,4]))
+print(is_member(3, [5,6,7]))
+print('\n')
+
+print('#12\n')
+print(overlapping([1,2,3], [3,4,5]))
+print(overlapping([1,2,3], [6,4,5]))
+print('\n')
+
+print('#13\n')
+print(generate_n_chars(7, 'g'))

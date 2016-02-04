@@ -1,4 +1,4 @@
-#HW2 for Course MATH 510
+#HW3 for Course MATH 510
 #Instructor:Professor G
 
 #Problem 1:Print a histogram to screen
@@ -53,6 +53,7 @@ def find_longest_word(wl):
      wl - any list of words with no space in the word since space will be counted in the length calculation
     """
     lgst=[]              #create an empty list lgst to store the longest words with a initail value of the first word
+                         #it is probable that there are several largest words,sharing the same length,so here we need a list variable
     lgstlen=0                                  #create a variable to store current largest words' length
     for word in wl:                            #use 'for' loop to get each word in the list 
         if lgstlen<len(word):                  #compare the current word's length with the current largest length
@@ -150,18 +151,18 @@ def translate(eng):
      eng - a string that allows containing the following words:"merry","christmas","and","happy","new","year"
            which are not sensative to capitalization
     """
-    dic={"merry" : "god",                 #create a dictionary that provides mappings from English to Swidish                  
+    dic={"merry" : "god",                                 #create a dictionary that provides mappings from English to Swidish                  
        "christmas" : "jul",
        "and":"och",
        "happy":"gott",
        "new":"nytt",
        "year":"ar"}
-    tranStr = ""                         #create an empty string to store translation word
-    to_list=eng.split(" ")                #change input string into a list with each word as an element in string
-                                          #here use space as seperator
-    for i in to_list:                     #use 'for' loop to get each word in the list to_list
-        if str(dic.get(i.lower()))!= "None":        #change the current element into lower case and look for the 
-                                                       #corresponding Swidish word from the dictionary dic
+    tranStr = ""                                           #create an empty string to store translation word
+    to_list=eng.split(" ")                                 #change input string into a list with each word as an element in string
+                                                           #here use space as seperator
+    for i in to_list:                                      #use 'for' loop to get each word in the list to_list
+        if str(dic.get(i.lower()))!= "None":               #change the current element into lower case and look for the 
+                                                           #corresponding Swidish word from the dictionary dic
             tranStr = tranStr+str(dic.get(i.lower()))+" "  #if can be translated,update tranStr by adding the translation
         else:
             return ('the sentence cannot be translated')   #once there is a word that cannot translated,return the message
@@ -216,7 +217,7 @@ def encoder_decoder(string):
        'y':'l', 'z':'m', 'A':'N', 'B':'O', 'C':'P', 'D':'Q', 'E':'R', 'F':'S', 
        'G':'T', 'H':'U', 'I':'V', 'J':'W', 'K':'X', 'L':'Y', 'M':'Z', 'N':'A', 
        'O':'B', 'P':'C', 'Q':'D', 'R':'E', 'S':'F', 'T':'G', 'U':'H', 'V':'I', 
-       'W':'J', 'X':'K', 'Y':'L', 'Z':'M'}
+       'W':'J', 'X':'K', 'Y':'L', 'Z':'M'}                                         #create key for translation matching
     
     newString=""                            #create an empty string to store the encoding or decoding result
 

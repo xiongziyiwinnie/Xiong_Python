@@ -94,7 +94,7 @@ def phrase_palindrome(prs):
     
     map=prs.maketrans('','',punctuation)                #create a transformation pattern of deleting punctuations in the string
                                                         #the transformation will be passed to translate() as argument
-    prs=prs.translate(map)                              #use function translate() to execute the transformation created
+    prs=prs.translate(map)                              #use the method translate() to execute the transformation created
                                                         #by maketrans() and then delete puntuations in the string prs
     prs=prs.replace(' ','')                             #delete all the space in the string prs
     prs=prs.lower()                                     #change all the characters to lower cases
@@ -196,7 +196,7 @@ def char_freq1(string):
 #the idea here is to use collections.Counter() to get problem solved easier
 import collections                             #import collections module
 def char_freq2(string):
-    counter=collections.Counter(string)        #use the build-in function Counter()to get problem solved
+    counter=collections.Counter(string)        #use the method collections.Counter() to get problem solved
     print(counter)
     return
     

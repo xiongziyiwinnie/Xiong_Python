@@ -83,6 +83,7 @@ def filter_long_words(wl,n):
     
     
 #Problem 6: Recognize phrase palindromes
+from string import punctuation                        
 def phrase_palindrome(prs):
     """
      This function is to recognize phrase palindromes regardless of punctuation,capitalization and space.
@@ -90,7 +91,7 @@ def phrase_palindrome(prs):
      Parameters:
      prs - a string that allows consisting of numbers,letters,space,punctuation
     """
-    from string import punctuation
+    
     map=prs.maketrans('','',punctuation)                #create a transformation pattern of deleting punctuations in the string
                                                         #the transformation will be passed to translate() as argument
     prs=prs.translate(map)                              #use function translate() to execute the transformation created
@@ -193,8 +194,8 @@ def char_freq1(string):
 
 #Solution 2:
 #the idea here is to use collections.Counter() to get problem solved easier
+import collections                             #import collections module
 def char_freq2(string):
-    import collections                         #import collections module
     counter=collections.Counter(string)        #use the build-in function Counter()to get problem solved
     print(counter)
     return

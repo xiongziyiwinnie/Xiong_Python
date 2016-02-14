@@ -45,6 +45,7 @@ def list_len(li):
     
     
 #Problem 4:Select the longest word in a given list
+## Sould return the length of the longest word instead of the word
 def find_longest_word(wl):
     """
      This function takes a list of words,get the length of each word and return the longest word
@@ -142,7 +143,8 @@ def verse(n):
     
     
     
-#Problem 9:Represent a samll bilingual lexicon as a Python dictionary 
+#Problem 9:Represent a samll bilingual lexicon as a Python dictionary
+## Function should take a list of strings as input - Prof G
 def translate(eng):
     """
      This function is to translate Christmas cards from English into Swedish in the following fashion:
@@ -291,6 +293,8 @@ def is_vowel(l):
         return True
     else:
         return False
+
+## This function should return the corrected string instead of printing it - Prof G
 def make_ing_form(verb):
     """
      This function is to get a present participle by adding the suffix -ing to the infinite form following a simple set
@@ -319,3 +323,44 @@ def make_ing_form(verb):
     else:                                     #by default just add 'ing'
         print(verb+'ing')
     return
+
+##Test Cases
+help(histogram)
+help(make_ing_form)
+
+print("1 Histogram ", histogram([1,2,3,5,6,7,6,5,4,3,2,1]), '\n')
+
+print("2 Max in List 77 ", max_in_list([1,2,3,77,4,5,6,7]), '\n')
+
+print("3 word to length map 3,5,7,4 ", list_len(['dog', 'snake', 'dolphin', 'cats']), '\n')
+
+print("4 Longest word 7 ", find_longest_word(['dog', 'snake', 'dolphin', 'cats']), '\n')
+
+print("5 filter long words snake, dolphin ", filter_long_words(['dog', 'snake', 'dolphin', 'cats'],4), '\n')
+
+print("6 Palindrome phrase TRUE ", phrase_palindrome("Go hang a salami I'm a lasagna hog."), '\n')
+
+print("7 Pangram TRUE ", is_pangram("The quick brown fox jumps over the lazy dog."), '\n')
+
+print("8 Cokes \n", verse(9))
+
+# print("9 Translating to Swedish ['god', 'jul', 'gott'] ", translate(['merry', 'christmas', 'happy']), '\n')
+print("9 Translating to Swedish ['god', 'jul', 'gott'] ", translate('merry christmas happy'), '\n')
+
+print("10 Char Freq1 {'a': 7, 'c': 3, 'b': 14, 'e': 2, 'd': 3, 'g': 7, 'f': 3} ", char_freq1("agbbabgcbdbabdgbdbabageebabcbgcbffgfabg"), '\n')
+print("10 Char Freq2 {'a': 7, 'c': 3, 'b': 14, 'e': 2, 'd': 3, 'g': 7, 'f': 3} ", char_freq2("agbbabgcbdbabdgbdbabageebabcbgcbffgfabg"), '\n')
+
+
+print("11 Decoder Caesar cipher? I much prefer Caesar salad!", encoder_decoder("Pnrfne pvcure? V zhpu cersre Pnrfne fnynq!"), '\n')
+
+print("12 correct This is very funny and cool. Indeed!", correct("This is very funny and cool.Indeed!"), '\n')
+
+print("13 3ps brushes ", make_3sg_form("brush"), '\n')
+print("13 3ps tries ", make_3sg_form("try"), '\n')
+print("13 3ps runs ", make_3sg_form("run"), '\n')
+print("13 3ps fixes ", make_3sg_form("fix"), '\n')
+
+print("14 ing lying ", make_ing_form("lie"), '\n')
+print("14 ing seeing ", make_ing_form("see"), '\n')
+print("14 ing moving ", make_ing_form("move"), '\n')
+print("14 ing hugging ", make_ing_form("hug"), '\n')
